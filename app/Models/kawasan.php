@@ -17,6 +17,6 @@ class kawasan extends Model
         return $this->belongsTo(pondok::class);
     }
     public function detail(){
-        return $this->morphOne(alamat_table::class,'alamattable');
+        return $this->morphMany(alamat_table::class,'alamattable');
     }
 }
