@@ -47,13 +47,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
+    
     public function pondok(){
         return $this->belongsTo(pondok::class);
     }
-    
     public function detail(){
-        return $this->morphOne(alamat_table::class,'alamattable');
+        return $this->morphMany(alamat_table::class,'alamattable');
     }
-
 }

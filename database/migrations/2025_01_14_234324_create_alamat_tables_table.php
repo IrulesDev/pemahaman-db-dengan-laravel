@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('alamat_tables', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            // $table->string('name');
             $table->foreignId('alamat_id')->references('id')->on('alamats')->onDelete('cascade')->nullable();
             $table->foreignId('alamattable_id')->nullable();
             $table->string('alamattable_type');

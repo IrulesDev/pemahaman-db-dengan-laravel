@@ -21,7 +21,7 @@ class alamat_tableFactory extends Factory
     public function definition(): array
     {
         return [
-            'name'=>fake()->name(),
+            // 'name'=>fake()->name(),
             'alamat_id'=>alamat::all()->random()->id,
             'alamattable_id'=>fake()->randomElement([
                 'pondok_id'=>pondok::all()->random()->id,

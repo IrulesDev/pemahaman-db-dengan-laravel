@@ -15,6 +15,9 @@ class alamat extends Model
     ];
 
     public function desa(){
-        return $this->belongsTo(desa::class);
+        return $this->belongsTo(desa::class , 'desa_id');
     }
+    // public function alamat_table(){
+    //     return $this->hasMany(alamat_table::class);
+    // }
 }

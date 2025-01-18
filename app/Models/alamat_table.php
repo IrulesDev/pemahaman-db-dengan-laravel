@@ -9,18 +9,18 @@ class alamat_table extends Model
 {    /** @use HasFactory<\Database\Factories\AlamatTableFactory> */
     use HasFactory;
     protected $fillable = [
-        'name',
+        // 'name',
         'alamat_id',
         'alamattable_id',
         'alamattable_type',
     ];
 
+    public function alamat(){
+        return $this->belongsTo(alamat::class ,'alamat_id' );
+    }
     public function alamattable(){
         return $this->morphTo();
     }
 
-    public function alamat(){
-        return $this->belongsTo(alamat::class , 'alamat_id');
-    }
 
 }
